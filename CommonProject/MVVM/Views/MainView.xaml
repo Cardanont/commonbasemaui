@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommonProject.MVVM.Views.MainView"
+             Title="MainView">
+
+    <Grid RowDefinitions=".1*, .3*, .8*">
+        <Label Text="This is the Machote"/>
+        <Grid Grid.Row="1"
+              BackgroundColor="DarkBlue">
+            
+        </Grid>
+        <Grid Grid.Row="2"
+              BackgroundColor="LightCoral">
+
+        </Grid>
+    </Grid>
+</ContentPage>
