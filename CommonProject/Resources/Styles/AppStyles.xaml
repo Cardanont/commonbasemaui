@@ -6,6 +6,7 @@
     <Color x:Key="DarkBlue">#212b4f</Color>
     <Color x:Key="LightBlue">#8a8ba6</Color>
     <Color x:Key="CategoryBackground">#053D38</Color>
+    <Color x:Key="TasksBackground">#8AA6A3</Color>
 
     <Style Class="DarkBlue" TargetType="Label">
         <Setter Property="TextColor" Value="{StaticResource DarkBlue}"/>
@@ -16,6 +17,16 @@
 
     <Style Class="CategroySection" TargetType="Grid">
         <Setter Property="Background" Value="{StaticResource CategoryBackground}"/>
+    </Style>
+    <Style Class="TasksSection" TargetType="Grid">
+        <Setter Property="Background" Value="{StaticResource TasksBackground}"/>
+    </Style>
+    <Style Class="Header" TargetType="Label">
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="Title"/>
+        <Setter Property="TextColor" Value="White"/>
     </Style>
 
 </ResourceDictionary>
