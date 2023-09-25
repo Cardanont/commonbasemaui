@@ -8,6 +8,12 @@
         <Label Text="This is the Machote" StyleClass="Header, DarkBlue"/>
         <Grid Grid.Row="1"
               StyleClass="CategroySection">
+            <Grid ColumnDefinitions=".5*, .5*">
+                <Label Text="First Column"
+                       TextColor="White"
+                       TextTransform="Uppercase"
+                       />
+            </Grid>
             
         </Grid>
         <Grid Grid.Row="2"
