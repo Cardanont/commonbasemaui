@@ -13,5 +13,7 @@ namespace CommonProject.MVVM.Models
         public string Color { get; set; }
         public int PendingTasks { get; set; }
         public float Percentage { get; set; }
+        public string Description { get; set; }
+
     }
 }

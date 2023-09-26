@@ -18,7 +18,19 @@
         </Grid>
         <Grid Grid.Row="2"
               StyleClass="TasksSection">
+            <Grid ColumnDefinitions=".7*, .3*">
+                <Label Text="First Column"
+                       TextColor="White"
+                       TextTransform="Uppercase"
+                       />
+                <Label Grid.Column="1"
+                          Text="Second Column"
+                          TextColor="White"
+                          TextTransform="Uppercase"
+                          />
+            </Grid>
 
+            
         </Grid>
     </Grid>
 </ContentPage>
