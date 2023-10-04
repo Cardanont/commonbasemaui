@@ -8,7 +8,7 @@ namespace RESTDemo
     {
         HttpClient client;
         JsonSerializerOptions _serializerOptions;
-        string baseUrl = "https://65193268818c4e98ac6021ad.mockapi.io";
+        string baseUrl = "<use baseUrl>";
         private List<User> Users;
 
         public MainViewModel()
