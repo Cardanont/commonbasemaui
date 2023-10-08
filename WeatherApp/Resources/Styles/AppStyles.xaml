@@ -23,4 +23,12 @@
         <Setter Property="FontAttributes" Value="Bold" />
     </Style>
 
+    <Style x:Key="WeatherTitle" TargetType="Label">
+        <Setter Property="FontFamily" Value="RubikLight" />
+    </Style>
+
+    <Style x:Key="WeatherValue" TargetType="Label">
+        <Setter Property="FontAttributes" Value="Bold" />
+    </Style>
+
 </ResourceDictionary>
