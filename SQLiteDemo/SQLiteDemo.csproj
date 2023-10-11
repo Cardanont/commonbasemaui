@@ -53,4 +53,9 @@
 		<PackageReference Include="sqlite-net-pcl" Version="1.9.141-beta" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="MVVM\ViewModels\" />
+	  <Folder Include="MVVM\Views\" />
+	</ItemGroup>
+
 </Project>
