@@ -13,5 +13,13 @@ namespace SQLiteDemo
             SQLiteOpenFlags.Create |
             // enable multi-threaded database access
             SQLiteOpenFlags.SharedCache;
+
+        public static string DatabasePath
+        {
+            get
+            {
+                return Path.Combine(FileSystem.AppDataDirectory, DBFileName);
+            }
+        }
     }
 }
