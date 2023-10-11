@@ -5,9 +5,11 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonProject", "CommonProject\CommonProject.csproj", "{4C41F19C-3B74-4C0D-95EB-B29146479835}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESTDemo", "RESTDemo\RESTDemo.csproj", "{0A1D2E4C-95B4-4029-8F38-A4EC4C3C735E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RESTDemo", "RESTDemo\RESTDemo.csproj", "{0A1D2E4C-95B4-4029-8F38-A4EC4C3C735E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp", "WeatherApp\WeatherApp.csproj", "{7F74CFD0-7FA8-41CF-91E2-C23E7DEE138F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLiteDemo", "SQLiteDemo\SQLiteDemo.csproj", "{8294EEC7-2DC8-44B9-A9A4-9BC601F477F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,12 @@ Global
 		{7F74CFD0-7FA8-41CF-91E2-C23E7DEE138F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F74CFD0-7FA8-41CF-91E2-C23E7DEE138F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7F74CFD0-7FA8-41CF-91E2-C23E7DEE138F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8294EEC7-2DC8-44B9-A9A4-9BC601F477F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8294EEC7-2DC8-44B9-A9A4-9BC601F477F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8294EEC7-2DC8-44B9-A9A4-9BC601F477F4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8294EEC7-2DC8-44B9-A9A4-9BC601F477F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8294EEC7-2DC8-44B9-A9A4-9BC601F477F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8294EEC7-2DC8-44B9-A9A4-9BC601F477F4}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
