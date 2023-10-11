@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 
 namespace WeatherApp.MVVM.Models
 {
@@ -20,6 +16,7 @@ namespace WeatherApp.MVVM.Models
         public Current_Weather current_weather { get; set; }
         public Daily_Units daily_units { get; set; }
         public Daily daily { get; set; }
+        public ObservableCollection<Daily2> daily2 { get; set; } = new ObservableCollection<Daily2>();
     }
 
     public class Current_Weather_Units
@@ -60,4 +57,11 @@ namespace WeatherApp.MVVM.Models
         public float[] temperature_2m_min { get; set; }
     }
 
+    public class Daily2
+    {
+        public string time { get; set; }
+        public int weathercode { get; set; }
+        public float temperature_2m_max { get; set; }
+        public float temperature_2m_min { get; set; }
+    }
 }

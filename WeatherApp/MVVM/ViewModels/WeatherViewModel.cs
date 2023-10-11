@@ -12,6 +12,8 @@ namespace WeatherApp.MVVM.ViewModels
         public WeatherData WeatherData { get; set; }
         public string PlaceName { get; set; }
         public DateTime Date { get; set; } = DateTime.Now;
+        public bool IsVisible { get; set; }
+        public bool IsLoading { get; set; }
         private HttpClient client;
 
         public WeatherViewModel()
@@ -41,6 +43,8 @@ namespace WeatherApp.MVVM.ViewModels
             var url =
                 $"https://api.open-meteo.com/v1/forecast?latitude={location.Latitude}&longitude={location.Longitude}&daily=weathercode,temperature_2m_max,temperature_2m_min&current_weather=true&timezone=America%2FChicago";
 
+            IsLoading = true;
+
             var response = await client.GetAsync(url);
 
             if(response.IsSuccessStatusCode)
@@ -49,8 +53,22 @@ namespace WeatherApp.MVVM.ViewModels
                 {
                     var data = await JsonSerializer.DeserializeAsync<WeatherData>(responseStream);
                     WeatherData = data;
+
+                    for (int i = 0; i < WeatherData.daily.time.Length; i++)
+                    {
+                        var daily2 = new Daily2
+                        {
+                            time = WeatherData.daily.time[i],
+                            weathercode = WeatherData.daily.weathercode[i],
+                            temperature_2m_max = WeatherData.daily.temperature_2m_max[i],
+                            temperature_2m_min = WeatherData.daily.temperature_2m_min[i]
+                        };
+                        WeatherData.daily2.Add(daily2);
+                    }
+                    IsVisible = true;
                 }
             }
+            IsLoading = false;
         }
 
         public async Task<Location> GetCoordinatesAsync(string address)
