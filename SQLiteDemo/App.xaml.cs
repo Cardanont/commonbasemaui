@@ -1,12 +1,20 @@
-﻿namespace SQLiteDemo
+﻿using SQLiteDemo.Repositories;
+using SQLiteDemo.MVVM.Views;
+
+namespace SQLiteDemo
 {
     public partial class App : Application
     {
-        public App()
+
+        public static  CustomerRepository CustomerRepo { get; private set; }
+
+        public App(CustomerRepository repo)
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            CustomerRepo = repo;
+
+            MainPage = new MainPage();
         }
     }
 }
