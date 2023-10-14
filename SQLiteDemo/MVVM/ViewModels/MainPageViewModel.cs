@@ -13,6 +13,8 @@ namespace SQLiteDemo.MVVM.ViewModels
 
         public ICommand AddOrUpdateCommand { get; set; }
 
+        public ICommand DeleteCommand { get; set; }
+
         public MainPageViewModel()
         {
             Refresh();
@@ -23,6 +25,13 @@ namespace SQLiteDemo.MVVM.ViewModels
                 App.CustomerRepo.AddOrUpdate(CurrentCustomer);
                 Console.WriteLine(App.CustomerRepo.StatusMessage);
                 GenerateNewCustomer();
+                Refresh();
+            });
+
+            DeleteCommand = new Command(async =>
+            {
+                App.CustomerRepo.Delete(CurrentCustomer.ID);
+                Console.WriteLine(App.CustomerRepo.StatusMessage);
                 Refresh();
             });
         }
