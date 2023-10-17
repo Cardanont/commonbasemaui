@@ -1,5 +1,6 @@
 ﻿using SQLite;
 using SQLiteDemo.Abstractions;
+using System.Reflection.Metadata.Ecma335;
 
 namespace SQLiteDemo.MVVM.Models
 {
@@ -16,5 +17,6 @@ namespace SQLiteDemo.MVVM.Models
         public string Address { get; set; }
         [Ignore]
         public bool IsYoung => Age > 50 ? true : false;
+        public Passport Passport { get; set; }
     }
 }

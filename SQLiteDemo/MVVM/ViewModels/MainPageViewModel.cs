@@ -42,6 +42,11 @@ namespace SQLiteDemo.MVVM.ViewModels
             CurrentCustomer = new Faker<Customer>().RuleFor(c => c.Name, f => f.Person.FullName)
                 .RuleFor(c => c.Address, f => f.Person.Address.Street)
                 .Generate();
+
+            CurrentCustomer.Passport = new Passport
+            {
+                ExpirationDate = DateTime.Now.AddDays(30)
+            };
         }
 
         private void Refresh()
