@@ -18,6 +18,7 @@ namespace SQLiteDemo
 
             builder.Services.AddSingleton<Repositories.BaseRepository<Customer>>();
             builder.Services.AddSingleton<Repositories.BaseRepository<Order>>();
+            builder.Services.AddSingleton<Repositories.BaseRepository<Passport>>();
 
 #if DEBUG
             builder.Logging.AddDebug();

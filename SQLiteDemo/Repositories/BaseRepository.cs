@@ -1,5 +1,6 @@
 ﻿using SQLite;
 using SQLiteDemo.Abstractions;
+using SQLiteNetExtensions.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -128,6 +129,11 @@ namespace SQLiteDemo.Repositories
             {
                 StatusMessage = $"Failed to add {item}. Error: {ex.Message}";
             }
+        }
+
+        public void SaveItemWIthChildren(T item, bool recursive = false)
+        {
+            connection.InsertWithChildren(item, recursive);
         }
     }
 }

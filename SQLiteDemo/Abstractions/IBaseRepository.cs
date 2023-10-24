@@ -11,6 +11,7 @@ namespace SQLiteDemo.Abstractions
         where T : TableData, new()
     {
         void SaveItem(T item);
+        void SaveItemWIthChildren(T item, bool recursive = false);
         T GetItem(int Id);
         T GetItem(Expression<Func<T, bool>> predicate);
         List<T> GetItems();

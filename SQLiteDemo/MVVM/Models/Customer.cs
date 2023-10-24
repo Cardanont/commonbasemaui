@@ -1,5 +1,6 @@
 ﻿using SQLite;
 using SQLiteDemo.Abstractions;
+using SQLiteNetExtensions.Attributes;
 using System.Reflection.Metadata.Ecma335;
 
 namespace SQLiteDemo.MVVM.Models
@@ -17,6 +18,9 @@ namespace SQLiteDemo.MVVM.Models
         public string Address { get; set; }
         [Ignore]
         public bool IsYoung => Age > 50 ? true : false;
+        [ForeignKey(typeof(Passport))]
+        public int PassportId { get; set; }
+        [OneToOne(CascadeOperations = CascadeOperation.CascadeInsert)]
         public Passport Passport { get; set; }
     }
 }
