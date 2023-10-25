@@ -1,4 +1,5 @@
-﻿using SQLite;
+﻿using Foundation;
+using SQLite;
 using SQLiteDemo.Abstractions;
 using SQLiteNetExtensions.Extensions;
 using System;
@@ -134,6 +135,21 @@ namespace SQLiteDemo.Repositories
         public void SaveItemWIthChildren(T item, bool recursive = false)
         {
             connection.InsertWithChildren(item, recursive);
+        }
+
+        public List<T> GetItemsWithChildren()
+        {
+            try
+            {
+                return connection.GetAllWithChildren<T>().ToList();
+            }
+            catch (Exception ex)
+            {
+                StatusMessage =
+                    $"Failed to retrieve data. Error: {ex.Message}";
+            }
+
+            return null;
         }
     }
 }
