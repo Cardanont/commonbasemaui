@@ -44,16 +44,25 @@ namespace SQLiteDemo.MVVM.ViewModels
                 .RuleFor(c => c.Address, f => f.Person.Address.Street)
                 .Generate();
 
-            CurrentCustomer.Passport = new Passport
+            CurrentCustomer.Passport = new List<Passport>
             {
-                ExpirationDate = DateTime.Now.AddDays(30)
+                new Passport
+                {
+                    ExpirationDate = DateTime.Now.AddDays(30)
+                },
+                new Passport
+                {
+                    ExpirationDate = DateTime.Now.AddDays(15)
+                }
             };
         }
 
         private void Refresh()
         {
-            Customers = App.CustomerRepo.GetItems();
+            //Customers = App.CustomerRepo.GetItems();
+            Customers = App.CustomerRepo.GetItemsWithChildren();
             //Customers = App.CustomerRepo.GetAll(c => c.Name.StartsWith("A"));
+
             var passports =
                 App.PassportsRepo.GetItems();
         }

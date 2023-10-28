@@ -1,13 +1,7 @@
-﻿using Foundation;
-using SQLite;
+﻿using SQLite;
 using SQLiteDemo.Abstractions;
 using SQLiteNetExtensions.Extensions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SQLiteDemo.Repositories
 {
@@ -31,9 +25,10 @@ namespace SQLiteDemo.Repositories
         {
             try
             {
-                int result = connection.Delete(item);
+                //int result = connection.Delete(item);
+                connection.Delete(item, true);
                 StatusMessage =
-                    $"{result} record(s) deleted [Name: {item}]";
+                    "record deleted";
             }
             catch (Exception ex)
             {
