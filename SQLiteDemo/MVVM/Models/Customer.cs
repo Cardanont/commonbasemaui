@@ -19,7 +19,7 @@ namespace SQLiteDemo.MVVM.Models
         [Ignore]
         public bool IsYoung => Age > 50 ? true : false;
 
-        [OneToMany(CascadeOperations = CascadeOperation.All)]
+        [ManyToMany(typeof(Passport),  CascadeOperations = CascadeOperation.All)]
         public List<Passport> Passport { get; set; }
     }
 }
