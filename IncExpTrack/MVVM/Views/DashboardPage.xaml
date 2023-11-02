@@ -6,6 +6,36 @@
 
     <Grid RowDefinitions=".15*,.15*,.15*,.55*">
         <RoundRectangle Grid.RowSpan="2" StyleClass="TopRectangle"/>
+        <VerticalStackLayout StyleClass="Header">
+            <Label Text="Good Morning" StyleClass="HeaderTitle"/>
+            <Label Text="Daniel Ontiv" StyleClass="HeaderSubTitle"/>
+        </VerticalStackLayout>
+
+        <Grid Grid.Row="1"
+              Grid.RowSpan="2"
+              StyleClass="BalanceGrid">
+            <RoundRectangle StyleClass="BalanceRectangle"/>
+
+            <Grid ColumnDefinitions="*,*"
+                  RowDefinitions=".333*,.333*,.333*"
+                  StyleClass="Padding25">
+
+                <VerticalStackLayout>
+                    <Label Text="Total Balance"/>
+                    <Label Text="$ 1,000,000.00" StyleClass="StrongTitle"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Row="2"/>
+                <Label Text="Income"/>
+                <Label Text="$ 1,000,000.00" StyleClass="StrongSubTitle"/>
+
+                <VerticalStackLayout Grid.Row="2"
+                                     Grid.ColumnSpan="1"
+                                     HorizontalOptions="Center">
+                    <Label Text="Expenses"/>
+                    <Label Text="$ 1,000,000.00" StyleClass="StrongTitle"/>
+                </VerticalStackLayout>
+            </Grid>
+        </Grid>
     </Grid>
     
 </ContentPage>
