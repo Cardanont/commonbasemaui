@@ -35,6 +35,11 @@
                     <Label Text="$ 1,000,000.00" StyleClass="StrongTitle"/>
                 </VerticalStackLayout>
             </Grid>
+
+            <Button Grid.Row="2"
+                    StyleClass="CircularButon"
+                    Text="+" />
+
         </Grid>
     </Grid>
     
