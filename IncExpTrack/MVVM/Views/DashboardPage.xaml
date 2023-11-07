@@ -40,6 +40,25 @@
                     StyleClass="CircularButon"
                     Text="+" />
 
+            <Grid Grid.Row="3"
+                  RowDefinitions=".1*, .9*"
+                  StyleClass="Margin15">
+                <Label Text="Transactions"/>
+                <CollectionView Grid.Row="1">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout ItemSpacing="15" Orientation="Vertical"/>
+                        
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.EmptyViewTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Label StyleClass="NoDataText" Text="No data found click the + button to add a transaction"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.EmptyViewTemplate>
+                </CollectionView>
+            </Grid>
+
         </Grid>
     </Grid>
     
