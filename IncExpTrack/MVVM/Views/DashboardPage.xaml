@@ -24,42 +24,70 @@
                     <Label Text="Total Balance"/>
                     <Label Text="$ 1,000,000.00" StyleClass="StrongTitle"/>
                 </VerticalStackLayout>
-                <VerticalStackLayout Grid.Row="2"/>
-                <Label Text="Income"/>
-                <Label Text="$ 1,000,000.00" StyleClass="StrongSubTitle"/>
+                <VerticalStackLayout Grid.Row="2">
+                    <Label Text="Income"/>
+                    <Label Text="$ 1,000,000.00" StyleClass="StrongSubTitle"/>
+                </VerticalStackLayout>
 
                 <VerticalStackLayout Grid.Row="2"
-                                     Grid.ColumnSpan="1"
+                                     Grid.Column="1"
                                      HorizontalOptions="Center">
                     <Label Text="Expenses"/>
-                    <Label Text="$ 1,000,000.00" StyleClass="StrongTitle"/>
+                    <Label Text="$ 1,000.00" StyleClass="StrongSubTitle"/>
                 </VerticalStackLayout>
             </Grid>
 
             <Button Grid.Row="2"
-                    StyleClass="CircularButon"
+                    StyleClass="CircularButton"
                     Text="+" />
+        </Grid>
+        <Grid Grid.Row="3"
+              RowDefinitions=".1*, .9*"
+              StyleClass="Margin15">
+            <Label Text="Transactions"/>
+            <CollectionView Grid.Row="1">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="15" Orientation="Vertical"/>
 
-            <Grid Grid.Row="3"
-                  RowDefinitions=".1*, .9*"
-                  StyleClass="Margin15">
-                <Label Text="Transactions"/>
-                <CollectionView Grid.Row="1">
-                    <CollectionView.ItemsLayout>
-                        <LinearItemsLayout ItemSpacing="15" Orientation="Vertical"/>
-                        
-                    </CollectionView.ItemsLayout>
-                    <CollectionView.EmptyViewTemplate>
-                        <DataTemplate>
-                            <Grid>
-                                <Label StyleClass="NoDataText" Text="No data found click the + button to add a transaction"/>
-                            </Grid>
-                        </DataTemplate>
-                    </CollectionView.EmptyViewTemplate>
-                </CollectionView>
-            </Grid>
+                </CollectionView.ItemsLayout>
 
+                <CollectionView.EmptyViewTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Label StyleClass="NoDataText" Text="No data found click the + button to add a transaction"/>
+
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.EmptyViewTemplate>
+                <CollectionView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>mono</x:String>
+                        <x:String>monodroid</x:String>
+                        <x:String>monotouch</x:String>
+                        <x:String>monorail</x:String>
+                        <x:String>monodevelop</x:String>
+                        <x:String>monotone</x:String>
+                        <x:String>monopoly</x:String>
+                        <x:String>monomodal</x:String>
+                        <x:String>mononucleosis</x:String>
+                    </x:Array>
+                </CollectionView.ItemsSource>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnDefinitions="*, *" RowDefinitions="*, *">
+                            <Label StyleClass="StrongMediumTitle" Text="Transaction"/>
+                            <Label Grid.Row="1"
+                                   StyleClass="SmallFont"
+                                   Text="Today"/>
+                            <Label Grid.RowSpan="2"
+                                   Grid.Column="1"
+                                   StyleClass="ListAmount"
+                                   Text="+ 5,000"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </Grid>
     </Grid>
-    
+
 </ContentPage>
