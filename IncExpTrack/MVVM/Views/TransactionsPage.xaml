@@ -13,6 +13,13 @@
               Grid.RowSpan="2"
               StyleClass="BalanceGrid">
             <RoundRectangle StyleClass="BalanceRectangle"/>
+
+            <VerticalStackLayout Spacing="10" StyleClass="Padding25">
+                <Label Text="Transaction Name"/>
+                <Frame StyleClass="FrameBorder">
+                    <Entry Text="Netfilx subscription" />
+                </Frame>
+            </VerticalStackLayout>
         </Grid>
     </Grid>
 </ContentPage>
