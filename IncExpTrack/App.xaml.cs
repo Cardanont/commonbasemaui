@@ -8,7 +8,7 @@ namespace IncExpTrack
         {
             InitializeComponent();
 
-            MainPage = new DashboardPage();
+            MainPage = new TransactionsPage();
         }
     }
 }
