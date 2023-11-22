@@ -10,5 +10,11 @@
         <VerticalStackLayout StyleClass="Header">
             <Label StyleClass="HeaderSubTitle" Text="Statistics" />
         </VerticalStackLayout>
+
+        <Grid Grid.Row="1"
+              Grid.RowSpan="2"
+              StyleClass="BalanceGrid">
+            <RoundRectangle StyleClass="BalanceRectangle"/>
+        </Grid>
     </Grid>
 </ContentPage>
