@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using IncExpTrack.MVVM.Models;
+using IncExpTrack.Repositories;
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace IncExpTrack
@@ -20,8 +22,10 @@ namespace IncExpTrack
                 });
 
 #if DEBUG
-		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
+
+            builder.Services.AddSingleton<BaseRepository<Transaction>>();
 
             return builder.Build();
         }
