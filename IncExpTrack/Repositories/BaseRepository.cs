@@ -2,6 +2,7 @@
 using IncExpTrack.Abstractions;
 using SQLiteNetExtensions.Extensions;
 using System.Linq.Expressions;
+using System.Transactions;
 
 namespace IncExpTrack.Repositories
 {
@@ -145,6 +146,11 @@ namespace IncExpTrack.Repositories
             }
 
             return null;
+        }
+
+        internal void SaveItem(Transaction transaction)
+        {
+            throw new NotImplementedException();
         }
     }
 }
