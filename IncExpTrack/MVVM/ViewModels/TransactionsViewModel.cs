@@ -5,7 +5,7 @@ namespace IncExpTrack.MVVM.ViewModels
     public class TransactionsViewModel
     {
 
-        public Transaction Transaction { get; set; } = new Transaction();
+        public Models.Transaction Transaction { get; set; } = new Models.Transaction();
 
         public string SaveTranasaction()
         {
