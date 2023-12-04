@@ -4,7 +4,7 @@ namespace IncExpTrack
 {
     public static class Constants
     {
-        private const string DBFileName = "SQLite.db001";
+        private const string DBFileName = "SQLite.db002";
 
         public const SQLiteOpenFlags Flags =
             // open the database in read/write mode

@@ -12,5 +12,6 @@ namespace IncExpTrack.MVVM.ViewModels
             App.TransactionsRepo.SaveItem(Transaction);
             return App.TransactionsRepo.StatusMessage;
         }
+
     }
 }
